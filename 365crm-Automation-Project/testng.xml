@@ -1,8 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="365CRM Test Suite" parallel="false">
-    <test name="Login Tests">
+<suite name="365CRM Complete Test Suite" parallel="tests" thread-count="2">
+    
+    <test name="Home Page Tests">
+        <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="tests.LoginTest"/>
+            <class name="tests.HomePageTests"/>
         </classes>
     </test>
+    
+    <test name="Navigation Tests">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.NavigationTests"/>
+        </classes>
+    </test>
+    
+    <test name="Features Tests">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.FeaturesTests"/>
+        </classes>
+    </test>
+    
+    <test name="Pricing Tests">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.PricingTests"/>
+        </classes>
+    </test>
+    
+    <test name="Sign Up Tests">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.SignUpTests"/>
+        </classes>
+    </test>
+    
+    <test name="Login Tests">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.LoginTests"/>
+        </classes>
+    </test>
+    
+    <test name="Contact Us Tests">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.ContactUsTests"/>
+        </classes>
+    </test>
+    
+    <test name="E2E Workflow Tests">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.E2EWorkflowTests"/>
+        </classes>
+    </test>
+    
 </suite>

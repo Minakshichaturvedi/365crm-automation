@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [365CRM Complete Test Suite]">
+  <test thread-count="2" parallel="tests" name="Navigation Tests(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="tests.NavigationTests">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="testBackButtonNavigation"/>
+          <include name="setupReport"/>
+          <include name="testNavigationToPricing"/>
+          <include name="testNavigationToContact"/>
+          <include name="initializePage"/>
+          <include name="flushReport"/>
+          <include name="testCompleteNavigationFlow"/>
+        </methods>
+      </class> <!-- tests.NavigationTests -->
+    </classes>
+  </test> <!-- Navigation Tests(failed) -->
+  <test thread-count="2" parallel="tests" name="Home Page Tests(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="tests.HomePageTests">
+        <methods>
+          <include name="setup"/>
+          <include name="testHomePageLoad"/>
+          <include name="tearDown"/>
+          <include name="testFeatureCards"/>
+          <include name="setupReport"/>
+          <include name="testHeroSection"/>
+          <include name="initializePage"/>
+          <include name="testNavigationLinks"/>
+          <include name="testUrlStructure"/>
+          <include name="flushReport"/>
+        </methods>
+      </class> <!-- tests.HomePageTests -->
+    </classes>
+  </test> <!-- Home Page Tests(failed) -->
+  <test thread-count="2" parallel="tests" name="Features Tests(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="tests.FeaturesTests">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="setupReport"/>
+          <include name="testFeaturesPageLoad"/>
+          <include name="testKeyCRMFeatures"/>
+          <include name="testFeatureCategories"/>
+          <include name="flushReport"/>
+          <include name="navigateToFeatures"/>
+        </methods>
+      </class> <!-- tests.FeaturesTests -->
+    </classes>
+  </test> <!-- Features Tests(failed) -->
+  <test thread-count="2" parallel="tests" name="Pricing Tests(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="tests.PricingTests">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="testCTAButtons"/>
+          <include name="setupReport"/>
+          <include name="testPricingPlans"/>
+          <include name="navigateToPricing"/>
+          <include name="flushReport"/>
+          <include name="testPricingPageLoad"/>
+        </methods>
+      </class> <!-- tests.PricingTests -->
+    </classes>
+  </test> <!-- Pricing Tests(failed) -->
+  <test thread-count="2" parallel="tests" name="Sign Up Tests(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="tests.SignUpTests">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="testSignUpPageLoad"/>
+          <include name="setupReport"/>
+          <include name="testValidSignUp"/>
+          <include name="testInvalidEmailSignUp"/>
+          <include name="flushReport"/>
+          <include name="navigateToSignUp"/>
+        </methods>
+      </class> <!-- tests.SignUpTests -->
+    </classes>
+  </test> <!-- Sign Up Tests(failed) -->
+  <test thread-count="2" parallel="tests" name="Login Tests(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="tests.LoginTests">
+        <methods>
+          <include name="setup"/>
+          <include name="testLoginPageLoad"/>
+          <include name="tearDown"/>
+          <include name="setupReport"/>
+          <include name="testForgotPasswordLink"/>
+          <include name="flushReport"/>
+          <include name="testEmptyLogin"/>
+          <include name="testLoginAttempt"/>
+          <include name="navigateToLogin"/>
+        </methods>
+      </class> <!-- tests.LoginTests -->
+    </classes>
+  </test> <!-- Login Tests(failed) -->
+  <test thread-count="2" parallel="tests" name="E2E Workflow Tests(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="tests.E2EWorkflowTests">
+        <methods>
+          <include name="setup"/>
+          <include name="testContactInquiryJourney"/>
+          <include name="tearDown"/>
+          <include name="setupReport"/>
+          <include name="flushReport"/>
+          <include name="testCompleteUserJourney"/>
+        </methods>
+      </class> <!-- tests.E2EWorkflowTests -->
+    </classes>
+  </test> <!-- E2E Workflow Tests(failed) -->
+  <test thread-count="2" parallel="tests" name="Contact Us Tests(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="tests.ContactUsTests">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="navigateToContact"/>
+          <include name="setupReport"/>
+          <include name="testInvalidEmailContact"/>
+          <include name="testContactPageLoad"/>
+          <include name="testValidContactSubmission"/>
+          <include name="flushReport"/>
+        </methods>
+      </class> <!-- tests.ContactUsTests -->
+    </classes>
+  </test> <!-- Contact Us Tests(failed) -->
+</suite> <!-- Failed suite [365CRM Complete Test Suite] -->

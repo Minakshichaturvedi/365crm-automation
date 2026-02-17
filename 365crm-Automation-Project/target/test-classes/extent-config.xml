@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- Report Title -->
+        <reportName>365crm-Automation-Report</reportName>
+        <documentTitle>365crm-Automation Execution</documentTitle>
+
+        <!-- Theme: STANDARD or DARK -->
+        <theme>DARK</theme>
+
+        <!-- Encoding -->
+        <encoding>UTF-8</encoding>
+
+        <!-- Timestamp format -->
+        <timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>
+
+        <!-- Chart visibility -->
+        <enableTimeline>true</enableTimeline>
+        <enableDashboard>true</enableDashboard>
+    </configuration>
+</extentreports>

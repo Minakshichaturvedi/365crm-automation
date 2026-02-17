@@ -1,59 +1,86 @@
 package pages;
 
+import base.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
-    
-    WebDriver driver;
-    
-    // Constructor
+public class LoginPage extends BasePage {
+
+    @FindBy(xpath = "//input[@placeholder='Email OR Mobile']")
+    private WebElement emailField;
+
+    @FindBy(xpath = "//input[@placeholder='············']")
+    private WebElement passwordField;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    private WebElement loginButton;
+
+    @FindBy(xpath = "//small[@class='float-end my-75 fw-bold ']")
+    private WebElement forgotPasswordLink;
+
+    @FindBy(xpath = "//span[@class='a-link fw-bold']")
+    private WebElement signUpLink;
+
+    @FindBy(xpath = "//div[contains(@class,'error')]")
+    private WebElement errorMessage;
+
+    @FindBy(xpath = "//input[@type='checkbox']")
+    private WebElement rememberMeCheckbox;
+
     public LoginPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+        super(driver);
     }
-    
-    // Page Elements - UPDATE LOCATORS BASED ON 365CRM
-    @FindBy(xpath = "//input[@placeholder='Email OR Mobile']")  // UPDATE THIS
-    WebElement usernameField;
-    
-    @FindBy(xpath = "//input[@placeholder='············']")  // UPDATE THIS
-    WebElement passwordField;
-    
-    @FindBy(xpath = "//button[@type='submit']")  // UPDATE THIS
-    WebElement loginButton;
-    
-    @FindBy(xpath = "//div[@class='error-message']")  // UPDATE THIS
-    WebElement errorMessage;
-    
-    // Action Methods
-    public void enterUsername(String username) {
-        usernameField.clear();
-        usernameField.sendKeys(username);
+
+    public void enterEmail(String email) {
+        sendKeys(emailField, email);
     }
-    
+
     public void enterPassword(String password) {
-        passwordField.clear();
-        passwordField.sendKeys(password);
+        sendKeys(passwordField, password);
     }
-    
-    public void clickLogin() {
-        loginButton.click();
+
+    public void clickLoginButton() {
+        click(loginButton);
     }
-    
-    public void login(String username, String password) {
-        enterUsername(username);
+
+    public void login(String email, String password) {
+        enterEmail(email);
         enterPassword(password);
-        clickLogin();
+        clickLoginButton();
     }
-    
+
+    public void clickRememberMe() {
+        if (isDisplayed(rememberMeCheckbox)) {
+            click(rememberMeCheckbox);
+        }
+    }
+
+    public void clickForgotPassword() {
+        click(forgotPasswordLink);
+    }
+
+    public SignUpPage clickSignUpLink() {
+        click(signUpLink);
+        return new SignUpPage(driver);
+    }
+
+    public boolean isErrorMessageDisplayed() {
+        return isDisplayed(errorMessage);
+    }
+
     public String getErrorMessage() {
-        return errorMessage.getText();
+        if (isDisplayed(errorMessage)) {
+            return getText(errorMessage);
+        }
+        return "";
     }
-    
+
+    public boolean isForgotPasswordLinkDisplayed() {
+        return isDisplayed(forgotPasswordLink);
+    }
+
     public boolean isLoginButtonDisplayed() {
-        return loginButton.isDisplayed();
+        return isDisplayed(loginButton);
     }
 }
